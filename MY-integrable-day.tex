@@ -409,8 +409,8 @@ Relation to Geometric Invariant Theory:
 \end{itemize}
 \end{frame}
 
-\section{Sketch proof}
-\begin{frame}{Sketch proof}
+\section{resolution}
+\begin{frame}{Sketch proof: the resolution}
 	\begin{itemize}
 		\item Logarithmic resolution
 		\[
@@ -432,5 +432,128 @@ Relation to Geometric Invariant Theory:
 	\end{itemize}
 \end{frame}
 
+\section{parabolic bundle}
+\begin{frame}{Sketch proof: the parabolic bundle}
+	Parabolic bundle \(\mE_{*}\) on \((X,D)\) defined by:
+	\begin{itemize}
+		\item vector bundle \(\mE = \pi^*(T\CP^n)\)
+		\item weights \(a_L\) for \(L \in \mLi\) given by
+		\[
+		a_L = (\codim L)^{-1} \sum_{H \supset L} a_H 
+		\]
+		\item increasing filtrations of \(\mE|_{D_L}\) by vector subbundles 
+		\begin{equation*}
+		F^L_a = 
+		\begin{cases}
+		\pi^*(TL) &\text{ if } a < a_L, \\
+		\mE|_{D_L} &\text{ if } a \geq a_L ,
+		\end{cases}
+		\end{equation*}	
+	\end{itemize}
+\emph{Remark:} klt implies \(a_L \in (0,1)\) and 
+CY implies \(\parc_1(\mE_{*}) = 0\)
+\end{frame}
+
+\section{stability theorem}
+\begin{frame}{Sketch proof: the stability theorem}
+	\begin{itemize}
+		\item Fix positive integers \(b_L\) for \(L\) in \( \mLi^{\circ} = \mLi \setminus \mH\) such  that
+		\begin{equation*}
+		P_k = k \cdot \pi^*\big(\mO_{\P^n}(1)\big) - \sum_{L \in \mLi^{\circ}} b_L \cdot D_L
+		\end{equation*}
+		is an ample line bundle on \(X\) for all \(k \gg 1\)
+		
+		\item \textbf{Stability Theorem.}
+		If \(\mV \subset \mE\) is a non-zero and proper \emph{saturated subsheaf}. Then
+		\[
+		\parc_{1}(\mV_{*}) \cdot c_1(P_k)^{n-1} < 0 
+		\]
+		where \(\mV_{*}\) is the naturally induced parabolic structure on \(\mV\)
+	\end{itemize}
+\end{frame}
+
+\section{bogomolov gieseker}
+\begin{frame}{Sketch proof: the Bogomolov-Gieseker inequality}
+	\begin{itemize}
+		\item The Bogomolov-Gieseker inequality for stable parabolic bundles (proved by Takuro Mochizuki in 2006, \emph{Ast\'erisque}) asserts that
+		\[
+	   \parch_2(\mE_{*}) \cdot 	c_1(P_k)^{n-2}  \leq 0 
+		\]
+		\item The expression \(\parch_2(\mE_{*}) \cdot 	c_1(P_k)^{n-2}\) defines a polynomial of degree \(n-2\) in \(k\) that we write as \(p(k)\)
+		\item Calculation of \(\parch_2(\mE_{*})\) and certain cup products in \(H^*(X)\) show that
+		\[
+		p(k) = Q(\ba) \cdot k^{n-2} + O(k^{n-3}) 
+		\]
+		\item Since \(p(k)<0\) for \(k \gg 1\)\,, we must have \(Q(\ba) \leq 0\)  \(\square\)
+	\end{itemize}
+\end{frame}
+
+\section{ditributions Pn}
+\begin{frame}{Stability Theorem and distributions on \(\CP^n\)}
+	\begin{block}{Key estimate}
+		Suppose that \((\mH, \ba)\) is a weighted arrangement that is  klt and CY.
+		Then there is \(\delta>0\) such that, for any distribution \(\mV \subset T\CP^n\) with index \(\imath = c_1(\mV) \geq 0\), we have
+		\begin{equation*}
+		\sum_{H  | H \pitchfork \mV} a_H \geq \imath + \delta  \,,
+		\end{equation*}
+		where the sum is over all \(H \in \mH\) that are transverse to \(\mV\).
+	\end{block}
+
+\textbf{Example.}
+Let \(M \subset \CP^n\) be a linear subspace with \(\dim M = r-1\) for some \(1 \leq r \leq n-1\). The collection of all \(r\)-dimensional subspaces that contain \(M\) defines a distribution \(\mV \cong \mO_{\P^n}(1)^{\oplus r}\) of index \(\imath = r\). 
+
+A hyperplane is tangent to \(\mV\) if and only if \(H \supset M\). 
+\end{frame}
+
+\begin{frame}{Application: lower bound on total sum of multiplicities}
+	%\(\mH = \{H_1, \ldots, H_N\}\) and \(t_i =\) number of \(L \in \mL^{n-2}\) with \(L \subset H_i\)
+	\begin{theorem}[dB-Panov, 2024]\label{thm:hir}
+		Suppose that for all \(L \in \mL\) we have
+		\begin{equation*}
+		m_L < \codim L \cdot \frac{N}{n+1} 
+		\end{equation*}
+		Then
+		\begin{equation*}
+		\sum_{L \in \mL^{n-2}} m_L \geq \left( 1 - \frac{2}{n+1} \right) N^2 + N
+		\end{equation*}
+		Equality holds if and only if every \(H \in \mH\) intersects \(\mH \setminus \{H\}\) along
+		\begin{equation*}
+		\left( 1 - \frac{2}{n+1} \right) N + 1	
+		\end{equation*}
+		codimension \(2\) subspaces.
+	\end{theorem}
+\end{frame}
+%The set of all hyperplanes of a finite projective space satisfies \eqref{eq:sthir} bit does not satisfy \eqref{eq:hirineq}
+
+
+\begin{frame}{Hirzebruch arrangements}
+	A hyperplane arrangement \(\mH\) is Hirzebruch if:
+	\begin{itemize}
+		\item for every subspace \(L \in \mL\) we have
+		\begin{equation*}
+		\mathcolorbox{green!20}{
+		\frac{m_L}{\codim L} \leq \frac{N}{n+1}
+		} 
+		\end{equation*}
+		
+		\item every \(H \in \mH\) intersects the others along
+		\begin{equation*}
+		\mathcolorbox{green!20}{
+		\left( 1 - \frac{2}{n+1} \right) N + 1
+		}
+		\end{equation*}
+		codimension \(2\) subspaces.
+	\end{itemize}
+
+	\textbf{Example:} irreducible complex reflection arrangements are Hirzebruch
+	
+	\textbf{Question:} do all Hirzebruch arrangements in dimension \(n \geq 2\) come from complex reflection groups?
+\end{frame}
+
+
+
+
 
 \end{document}
+
+
