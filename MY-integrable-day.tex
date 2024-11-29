@@ -142,9 +142,6 @@
 %commands
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
 
-%\DeclareMathOperator{\tr}{tr}
-
-%\DeclareMathOperator{\codim}{codim}
 
 % openning
 \title[]{Miyaoka-Yau inequality for hyperplane arrangements}
@@ -160,13 +157,11 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\maketitle
 \end{frame}
 
-% Uncomment these lines for an automatically generated outline.
-%\begin{frame}{Outline}
-%  \tableofcontents
-%\end{frame}
 
-\section{plan}
-\begin{frame}{Plan}
+
+
+\begin{frame}
+	\frametitle{Plan}
 	\begin{itemize}
 		\item Main result: \(Q \leq 0\) on \(C\)
 		\vfill
@@ -176,8 +171,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\end{itemize}
 \end{frame}
 
-\section{basic def}
-\begin{frame}{Basic definitions}
+
+\begin{frame}
+	\frametitle{Basic definitions}
 	\begin{itemize}
 		\item This is a paper about complex projective space
 		\begin{equation*}
@@ -202,8 +198,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 \emph{Note:} \(m_L \geq \codim L\)
 \end{frame}
 
-\section{cod 2 subspace}
-\begin{frame}{Codimension \(2\) subspaces}
+
+\begin{frame}
+	\frametitle{Codimension \(2\) subspaces}
 	Let \(L \subset \CP^n\) be a codimension \(2\) intersection of hyperplanes in \(\mH\). 
 	
 	We say that
@@ -242,8 +239,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\end{figure}
 \end{frame}
 
-\section{Hirzebruch quadratic form}
-\begin{frame}{The Hirzebruch quadratic form}
+
+\begin{frame}
+	\frametitle{The Hirzebruch quadratic form}
 	\begin{itemize}
 		\item \(\mH = \{H_1, \ldots, H_N\}\) hyperplane arrangement in \(\CP^n\)
 		\item \(\sigma_i = \) number of irreducible codimension \(2\) subspaces \(L \subset H_i\)
@@ -263,8 +261,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\]
 \end{frame}
 
-\section{Hofer}
-\begin{frame}{H\"ofer's formula}
+
+\begin{frame}
+	\frametitle{H\"ofer's formula}
 	\begin{center}
 		\begin{figure}
 			\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{hofer}
@@ -272,8 +271,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\end{center}
 \end{frame}
 
-\section{matroid polytope}
-\begin{frame}{The matroid polytope}
+
+\begin{frame}
+	\frametitle{The matroid polytope}
 	\(\mH\) is an \emph{essential} and \emph{irreducible} hyperplane arrangement in \(\CP^n\)
 	\vfill
 	\begin{itemize}	
@@ -296,8 +296,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\]
 \end{frame}
 
-\section{stable cone}
-\begin{frame}{The semistable and stable cones}
+
+\begin{frame}
+	\frametitle{The semistable and stable cones}
 	\begin{itemize}
 		\item The \textbf{semistable cone} is the cone over the matroid polytope
 		\[
@@ -318,8 +319,9 @@ arXiv: 2411.09573 (joint with Dmitri Panov)}
 	\end{itemize}
 \end{frame}
 
-\section{GIT}
-\begin{frame}{Defining linear inequalities of the stable cone}
+
+\begin{frame}
+	\frametitle{Defining linear inequalities of the stable cone}
 	\begin{itemize}
 		\item Let \(\mL\) be the finite set of \emph{non-empty} and \emph{proper} linear subspaces \(L \subset \CP^n\) obtained by intersecting members of \(\mH\)
 		
@@ -344,8 +346,9 @@ Relation to Geometric Invariant Theory:
 \end{itemize}
 \end{frame}
 
-\section{main result}
-\begin{frame}{Main Result}
+
+\begin{frame}
+	\frametitle{Main Result}
 	\begin{theorem}[Miyaoka-Yau inequality, dB-Panov 2024]
 		The Hirzebruch quadratic form is non-positive on the semistable cone:
 		\[
@@ -357,11 +360,15 @@ Relation to Geometric Invariant Theory:
 	\item If \(n=1\) then \(Q \equiv 0\)
 	\item If \(n=2\) this follows from Panov's \emph{Polyhedral K\"ahler Manifolds}, Geometry \(\&\) Topology, 2009
 	\item \textbf{Conjecture:} if \(\ba = (a_1, \ldots, a_N) \in C^{\circ}\) is such that \(Q(\ba) = 0\) and  \(a_i \in (0,1)\). Then there is a K\"ahler metric on \(\CP^n\) of constant holomorphic sectional curvature with cone angles \(2\pi\alpha_i\) in transverse directions to the hyperplanes \(H_i \in \mH\), with \(\alpha_i = 1-a_i\).
+	\begin{itemize}
+		\item If \(\mH\) is a complex reflection arrangement then the metrics have been constructed by Couwenberg-Heckman-Looijenga (IH\'ES, 2005)
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{klt and cy}
-\begin{frame}{klt and CY arrangements}
+
+\begin{frame}
+	\frametitle{klt and CY arrangements}
 	A weighted arrangement is a pair \((\mH, \ba)\) consisting of:
 	\begin{itemize}
 		\item a hyperplane arrangement \(\mH\) in \(\CP^n\)\,;
@@ -376,7 +383,7 @@ Relation to Geometric Invariant Theory:
 		\item  klt if
 		\[
 		\mathcolorbox{yellow!20}{
-	\forall L \in \mL: \,\, \sum_{H \,|\, H \supset L} a_H < \codim L 	
+	\forall L \in \mL: \,\, \sum_{H \supset L} a_H < \codim L 	
 	}
 		\] 
 		where \(\mL\) is the set of non-empty and proper subspaces \(L \subset \CP^n\) obtained by intersecting hyperplanes in \(\mH\).
@@ -391,12 +398,13 @@ Relation to Geometric Invariant Theory:
 	\end{itemize}
 \end{frame}
 
-\section{restatement}
-\begin{frame}{Restatement of the main theorem}
+
+\begin{frame}
+	\frametitle{Restatement of the main theorem}
 	\begin{theorem}[Miyaoka-Yau inequality, dB-Panov 2024]
 		Suppose that the weighted arrangement \((\mH, \ba)\) is klt and CY. Then
 		\[
-		Q(\ba) = \sum_{L \in \mLi^{n-2}} a_L^2 \,-\, \frac{1}{2} \sum_{H \in \mH} B_H \cdot a_H^2 \,-\, \frac{n+1}{2} \leq 0 \,.
+		Q(\ba) = \sum_{L \in \mLi^{n-2}} a_L^2 \,-\, \frac{1}{2} \sum_{H \in \mH} B_H \cdot a_H^2 \,-\, \frac{n+1}{2} \leq 0 
 		\]
 	\end{theorem}
 \begin{itemize}
@@ -409,8 +417,9 @@ Relation to Geometric Invariant Theory:
 \end{itemize}
 \end{frame}
 
-\section{resolution}
-\begin{frame}{Sketch proof: the resolution}
+
+\begin{frame}
+	\frametitle{Sketch proof: the resolution}
 	\begin{itemize}
 		\item Logarithmic resolution
 		\[
@@ -432,8 +441,9 @@ Relation to Geometric Invariant Theory:
 	\end{itemize}
 \end{frame}
 
-\section{parabolic bundle}
-\begin{frame}{Sketch proof: the parabolic bundle}
+
+\begin{frame}
+	\frametitle{Sketch proof: the parabolic bundle}
 	Parabolic bundle \(\mE_{*}\) on \((X,D)\) defined by:
 	\begin{itemize}
 		\item vector bundle \(\mE = \pi^*(T\CP^n)\)
@@ -454,8 +464,9 @@ Relation to Geometric Invariant Theory:
 CY implies \(\parc_1(\mE_{*}) = 0\)
 \end{frame}
 
-\section{stability theorem}
-\begin{frame}{Sketch proof: the stability theorem}
+
+\begin{frame}
+	\frametitle{Sketch proof: the stability theorem}
 	\begin{itemize}
 		\item Fix positive integers \(b_L\) for \(L\) in \( \mLi^{\circ} = \mLi \setminus \mH\) such  that
 		\begin{equation*}
@@ -472,8 +483,9 @@ CY implies \(\parc_1(\mE_{*}) = 0\)
 	\end{itemize}
 \end{frame}
 
-\section{bogomolov gieseker}
-\begin{frame}{Sketch proof: the Bogomolov-Gieseker inequality}
+
+\begin{frame}
+	\frametitle{Sketch proof: the Bogomolov-Gieseker inequality}
 	\begin{itemize}
 		\item The Bogomolov-Gieseker inequality for stable parabolic bundles (proved by Takuro Mochizuki in 2006, \emph{Ast\'erisque}) asserts that
 		\[
@@ -488,8 +500,9 @@ CY implies \(\parc_1(\mE_{*}) = 0\)
 	\end{itemize}
 \end{frame}
 
-\section{ditributions Pn}
-\begin{frame}{Stability Theorem and distributions on \(\CP^n\)}
+
+\begin{frame}
+	\frametitle{Stability Theorem and distributions on \(\CP^n\)}
 	\begin{block}{Key estimate}
 		Suppose that \((\mH, \ba)\) is a weighted arrangement that is  klt and CY.
 		Then there is \(\delta>0\) such that, for any distribution \(\mV \subset T\CP^n\) with index \(\imath = c_1(\mV) \geq 0\), we have
@@ -505,20 +518,21 @@ Let \(M \subset \CP^n\) be a linear subspace with \(\dim M = r-1\) for some \(1 
 A hyperplane is tangent to \(\mV\) if and only if \(H \supset M\). 
 \end{frame}
 
-\begin{frame}{Application: lower bound on total sum of multiplicities}
+\begin{frame}
+	\frametitle{Application: lower bound on total sum of multiplicities}
 	%\(\mH = \{H_1, \ldots, H_N\}\) and \(t_i =\) number of \(L \in \mL^{n-2}\) with \(L \subset H_i\)
 	\begin{theorem}[dB-Panov, 2024]\label{thm:hir}
 		Suppose that for all \(L \in \mL\) we have
 		\begin{equation*}
-		m_L < \codim L \cdot \frac{N}{n+1} 
+		m_L < \codim L \cdot \frac{N}{n+1} \hspace{3mm} \big(\,i.e.\,\, \mathbf{1} \in C^{\circ} \,\big)
 		\end{equation*}
 		Then
 		\begin{equation*}
-		\sum_{L \in \mL^{n-2}} m_L \geq \left( 1 - \frac{2}{n+1} \right) N^2 + N
+		\sum_{L \in \mL^{n-2}} m_L \geq \left( 1 - \frac{2}{n+1} \right) N^2 + N \hspace{3mm} \big(\,i.e.\,\, Q(\mathbf{1}) \leq 0 \,\big)
 		\end{equation*}
 		Equality holds if and only if every \(H \in \mH\) intersects \(\mH \setminus \{H\}\) along
 		\begin{equation*}
-		\left( 1 - \frac{2}{n+1} \right) N + 1	
+		\left( 1 - \frac{2}{n+1} \right) N + 1 \hspace{3mm} \big(\,i.e.\,\, \mathbf{1} \in \ker Q \,\big)	
 		\end{equation*}
 		codimension \(2\) subspaces.
 	\end{theorem}
@@ -526,7 +540,8 @@ A hyperplane is tangent to \(\mV\) if and only if \(H \supset M\).
 %The set of all hyperplanes of a finite projective space satisfies \eqref{eq:sthir} bit does not satisfy \eqref{eq:hirineq}
 
 
-\begin{frame}{Hirzebruch arrangements}
+\begin{frame}
+	\frametitle{Hirzebruch arrangements}
 	A hyperplane arrangement \(\mH\) is Hirzebruch if:
 	\begin{itemize}
 		\item for every subspace \(L \in \mL\) we have
@@ -540,17 +555,132 @@ A hyperplane is tangent to \(\mV\) if and only if \(H \supset M\).
 		\begin{equation*}
 		\mathcolorbox{green!20}{
 		\left( 1 - \frac{2}{n+1} \right) N + 1
-		}
+		} 
 		\end{equation*}
 		codimension \(2\) subspaces.
 	\end{itemize}
 
-	\textbf{Example:} irreducible complex reflection arrangements are Hirzebruch
+\textbf{Examples:} (i) The \(n+1\) coordinate hyperplanes in \(\CP^n\).
+
+(ii) If \(\mH \subset \CP^1\) and \(|\mH| \geq 2\) then \(\mH\) is Hirzebruch. 
+
+However, if \(n\geq 2\) then the Hirzebruch condition is more rigid.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Complex reflection groups}
+	\begin{itemize}
+		\item \(G \subset U(n+1)\) irreducible complex reflection group
+		\item \(\mH = \) reflecting hyperplanes
+	\end{itemize}
+
+	\begin{theorem}[dB-Panov, 2024]
+		\(\mH\) is Hirzebruch and its quadratic form \(Q\) is negative semidefinite
+	\end{theorem}
 	
-	\textbf{Question:} do all Hirzebruch arrangements in dimension \(n \geq 2\) come from complex reflection groups?
+	\emph{Proof:} show that \(\mathbf{1} \in C^{\circ}\) and \(Q(\mathbf{1}) = 0\). Key identity:
+	\[
+	\sum_{H \in \mH} | \langle v, n_H \rangle |^2 = \frac{N}{n+1} \cdot \| v \|^2  
+	\]
+	which follows from Schur's lemma. \,\, \(\square\)
+	
+	\textbf{Example:} Take in $\mathbb CP^{n+1}$ the plane $\mathbb CP^n=\{x_1+\ldots+x_{n+2}=0\}$.
+	
+	The \emph{braid arrangement} $A_{n+1}\subset\mathbb CP^n$ is given by planes $x_i-x_j=0$ for $i\ne j\in \{1,\ldots,n+2\}$.
+	$A_{n+1}$ consists of $(n+1)(n+2)/2$ hyperplanes and induces $A_n$ on each of them.
 \end{frame}
 
 
+\begin{frame}
+	\frametitle{Hirzebruch line arrangements/Geometrization}
+	
+	{\bf Hirzebruch's problem 1985.} Consider an arrangement of \(N\) lines in $\mathbb CP^2$ such that each line intersects others in exactly \(N/3 + 1\) points. Does such an arrangement consist of mirrors of a finite reflection group?
+	
+	\vspace{-1mm}
+	\begin{figure}[!h]
+		\includegraphics[scale=.1]{Hirzebruch1}
+		\includegraphics[scale=.1]{Hirzebruch2}
+		\includegraphics[scale=.1]{Hirzebruch3}
+		\includegraphics[scale=.05]{Hirzebruch5}
+	\end{figure}
+	
+	\vspace{-1mm}
+	\begin{figure}[!h]
+		\includegraphics[scale=.15]{platon}
+	\end{figure}
+	
+	Panov (Geometry \& Topology, 2018): there exist exactly four Hirzebruch line arrangements in \(\mathbb{RP}^2\)
+\end{frame}
+
+\begin{frame}
+	\frametitle{Example: Non-Pappus matroid}
+	
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+		\begin{figure}[h]
+			\centering
+			\scalebox{.5}{
+				\begin{tikzpicture}
+					\node (1) at (-4,4) [thick,circle,draw,fill=yellow!50] {\(1\)};
+					\node (2) at (0,4) [thick,circle,draw,fill=yellow!50] {\(2\)};
+					\node (3) at (4,4) [thick,circle,draw,fill=yellow!50] {\(3\)};
+					\node (7) at (-2,0) [thick,circle,draw,fill=yellow!50] {\(7\)};
+					\node (8) at (0,0) [thick,circle,draw,fill=yellow!50] {\(8\)};
+					\node (9) at (2,0) [thick,circle,draw,fill=yellow!50] {\(9\)};
+					\node (4) at (-4,-4) [thick,circle,draw,fill=yellow!50] {\(4\)};
+					\node (5) at (0,-4) [thick,circle,draw,fill=yellow!50] {\(5\)};
+					\node (6) at (4,-4) [thick,circle,draw,fill=yellow!50] {\(6\)};
+					
+					\draw (1) -- (2) -- (3);
+					\draw (4) -- (5) -- (6);
+					
+					\draw (1) -- (7) -- (5);
+					\draw (2) -- (7) -- (4);
+					
+					\draw (2) -- (9) -- (6);
+					\draw (3) -- (9) -- (5);
+					
+					\draw (1) -- (8) -- (6);
+					\draw (3) -- (8) -- (4);
+				\end{tikzpicture}
+			}
+			%\caption{The Non-Pappus matroid.}
+			\label{fig:nonpapus}
+		\end{figure}	
+		\end{column}
+		
+		\begin{column}{.68\textwidth}
+			\small{
+			\[
+			\begin{pmatrix}
+				-5 & 1 & 1 & -2 & 1 & 1 & 1 & 1 & -2 \\
+				1 & -5 & 1 & 1 & -2 & 1 & 1 & -2 & 1 \\
+				1 & 1 & -5 & 1 & 1 & -2 & -2 & 1 & 1 \\
+				-2 & 1 & 1 & -5 & 1 & 1 & 1 & 1 & -2 \\
+				1 & -2 & 1 & 1 & -5 & 1 & 1 & -2 & 1 \\
+				1 & 1 & -2 & 1 & 1 & -5 & -2 & 1 & 1 \\
+				1 & 1 & -2 & 1 & 1 & -2 & -2 & -2 & -2 \\
+				1 & -2 & 1 & 1 & -2 & 1 & -2 & -2 & -2 \\
+				-2 & 1 & 1 & -2 & 1 & 1 & -2 & -2 & -2
+			\end{pmatrix}
+			\, 
+			\]
+		}
+		\end{column}
+	\end{columns}
+		
+	The Hirzebruch quadratic form is \(\leq 0\) on the positive octant of \(\R^9\).
+	\vfill
+	
+	\textbf{Question:} does Miyaoka-Yau inequality holds for oriented matroids?
+	\vfill
+	\textbf{Open problem:} do symplectic \(4\)-manifolds of `general type' satisfy \(c_1^2 \leq 3c_2\) ?
+	
+	\begin{center}
+		THANK YOU!
+	\end{center}
+\end{frame}
 
 
 
